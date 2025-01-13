@@ -1,2 +1,5 @@
-# tugas-la-pemroweb
-Tugas laporan akhir pemrograman web.
+# Tugas laporan akhir Pemrograman Web
+
+Dibuat oleh:
+- Justin Anditiaman (50422764)
+- M Rivaldi YS (50422826)
