@@ -1,0 +1,236 @@
+body,
+html {
+  background-color: #333;
+  margin: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+.wrapper {
+  width: 400px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 800px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+/** form */
+.wrapper > header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.wrapper > header > h3 {
+  margin: 0px;
+  margin-right: 10px;
+  font-size: 25px;
+  padding: 0px;
+  display: inline;
+}
+
+.wrapper > header > span {
+  font-size: 12px;
+  color: #333;
+  border-radius: 5px;
+  padding: 2px;
+  font-weight: bold;
+  background-color: #ffc83d;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+}
+.input-box > input {
+  width: 100%;
+  background-color: #dedede;
+  border-radius: 100px;
+  padding: 10px 100px 10px 20px;
+  line-height: 1;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+.input-box > button {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  border: 0;
+  background: #00d26a;
+  color: #fff;
+  outline: none;
+  margin: 0;
+  padding: 0 10px;
+  border-radius: 100px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/** list */
+.wrapper > ul {
+  padding: 0px;
+}
+.wrapper > ul > li {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.wrapper > ul > li > .left {
+  width: 30px;
+}
+.wrapper > ul > li > .left > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper > ul > li > .center {
+  width: 250px;
+}
+
+.wrapper > ul > li > .center.strike {
+  text-decoration-line: line-through;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #00d26a;
+}
+.wrapper > ul > li > .right {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+}
+.wrapper > ul > li > .right > span {
+  width: 30%;
+}
+.wrapper > ul > li > .right > span > button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px); /* Blur background for modern effect */
+}
+
+/* Popup Box */
+.popup {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: popup-show 0.3s ease-in-out; /* Smooth transition */
+  width: 350px;
+  max-width: 90%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Smooth popup animation */
+@keyframes popup-show {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Title */
+.popup h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Input Field */
+.popup input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box; /* Prevents input from overflowing */
+  transition: 0.2s;
+}
+
+.popup input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Buttons Container */
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 15px; /* Menambahkan jarak yang lebih konsisten antara tombol */
+}
+
+/* Save Button */
+.popup-buttons .btn-save {
+  background: linear-gradient(90deg, #00d26a, #21a304d8);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+  width: 100%; /* Membuat tombol mengambil lebar penuh jika ruang memungkinkan */
+}
+
+.popup-buttons .btn-save:hover {
+  background: linear-gradient(90deg, #058900, #00d269e7);
+}
+
+/* Cancel Button */
+.popup-buttons .btn-cancel {
+  background: linear-gradient(90deg, #dc3545, #a71d2a);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+  width: 100%; /* Membuat tombol mengambil lebar penuh jika ruang memungkinkan */
+}
+
+.popup-buttons .btn-cancel:hover {
+  background: linear-gradient(90deg, #a71d2a, #721c24);
+}
+
+
+
+
+
+.completed {
+  text-decoration: line-through;
+  color: #00d26a;
+}
